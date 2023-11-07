@@ -1,49 +1,49 @@
-# Classificação com KNN
+# KNN Classification
 
-Este projeto tem como objetivo principal a aplicação do algoritmo K-Nearest Neighbors (KNN) para classificação de dados, visando o entendimento do funcionament odo algoritmoo.  O projeto inclui análise exploratória, aplicação do KNN, técnicas de validação, otimização de hiperparâmetros e visualização das fronteiras de decisão.
+This project aims to apply the K-Nearest Neighbors (KNN) algorithm for data classification, with the main goal of understanding how the algorithm functions. The project includes exploratory analysis, KNN application, validation techniques, hyperparameter optimization, and visualization of decision boundaries.
 
 ![Cartão de Visita](https://cdn.discordapp.com/attachments/1167606494536142864/1167606533811601429/Copia_de_Modern_Creative_Business_Card.png?ex=654ebd52&is=653c4852&hm=78a86e0bfea405ba39b4970117881fee3e14aefb38b23db2ad685b7a785f6708&)
 
-## Índice
-- [1. Introdução](#1-Introdução)
-- [2. Compreensão dos Dados](#2-Compreensão-dos-Dados)
-- [3. Plano de Ação](#3-Plano-de-Ação)
-- [4. Insight dos Dados](#4-Insights-dos-Dados)
-- [5. Projeções Futuras](#5-Projeções-Futuras)
+## Table of Contents
+- [1. Introduction](#1-Introduction)
+- [2. Data Understanding](#2-Data-Understanding)
+- [3. Action Plan](#3-Action-Plan)
+- [4. Data Insights](#4-Data-Insights)
+- [5. Future Outlook](#5-Future-Outlook)
 
 
-## 1. Introdução
+## 1. Introduction
 
-Este projeto utiliza o algoritmo K-Nearest Neighbors (KNN) para classificar dados do conjunto **Wine**. O KNN é uma técnica de aprendizado de máquina que classifica um ponto de dados com base nos pontos mais próximos a ele no espaço multidimensional. No contexto do conjunto de dados Wine, que contém informações químicas de vinhos, o KNN será aplicado para categorizar vinhos em diferentes grupos. Os dados estão disponiveis no [UCI Machine Learning Repository](https://archive.ics.uci.edu/dataset/109/wine), [Kaggle](https://www.kaggle.com/datasets/tawfikelmetwally/wine-dataset/data) e [Scikit Learn](https://scikit-learn.org/stable/modules/generated/sklearn.datasets.load_wine.html#sklearn.datasets.load_wine).
+This project utilizes the K-Nearest Neighbors (KNN) algorithm to classify data from the **Wine dataset**. KNN is a machine learning technique that categorizes a data point based on the nearest points in a multidimensional space. In the context of the Wine dataset, which contains chemical information about wines, KNN will be applied to categorize wines into different groups. The data is available on [UCI Machine Learning Repository](https://archive.ics.uci.edu/dataset/109/wine), [Kaggle](https://www.kaggle.com/datasets/tawfikelmetwally/wine-dataset/data) e [Scikit Learn](https://scikit-learn.org/stable/modules/generated/sklearn.datasets.load_wine.html#sklearn.datasets.load_wine).
  
 
-## 2. Compreensão dos Dados
-Os dados do dataset wine são compostos por 14 features com uma delas sendo target e 178 labels. Todos os dados são do tipo númerico, há ausencia de valores núlos e duplicados. O dicionario de nommenclatura é composto por:
+## 2. Data Understanding
+The Wine dataset consists of 14 features, one of which is the target, and 178 labels. All the data is numerical, with no missing values or duplicates. The nomenclature dictionary includes:
 
 |Attribute|Definition|Data Type|
 |---|---|---|
-|alcohol|Teor alcoólico|float64|
-|malic_acid|Ácido málico|float64|
-|ash|Cinzas|float64|
-|alcalinity_of_ash|Alcalinidade das cinzas|float64|
-|magnesium|Magnésio|float64|
-|total_phenols|Fenóis totais|float64|
-|flavanoids|Flavonoides|float64|
-|nonflavanoid_phenols|Fenóis não flavonoides|float64|
-|proanthocyanins|Proantocianidinas|float64|
-|color_intensity|Intensidade da cor|float64|
-|hue|Cor|float64|
-|od280/od315_of_diluted_wines|OD280/OD315 de vinhos diluídos|float64|
+|alcohol|Alcohol content|float64|
+|malic_acid|Malic acid|float64|
+|ash|Ash|float64|
+|alcalinity_of_ash|Alkalinity of ash|float64|
+|magnesium|Magnesium|float64|
+|total_phenols|Total phenols|float64|
+|flavanoids|Flavanoids|float64|
+|nonflavanoid_phenols|Non-flavanoid phenols|float64|
+|proanthocyanins|Proanthocyanins|float64|
+|color_intensity|Color intensity|float64|
+|hue|Hue|float64|
+|od280/od315_of_diluted_wines|OD280/OD315 of diluted wines|float64|
 |proline|Proline|float64|
-|class|Tipo do vinho (target)|int32|
+|class|Wine type (target)|int32|
 
-## 3. Plano de Ação
+## 3. Action Plan
 
-### 3.1. Objetivo
-Após concluir o [projeto inicial de implementação do KNN](https://github.com/lfaferreira/ada-potencia-tech-knn-project), fiquei intrigado em aprofundar meu entendimento sobre seu funcionamento. Este repositório explora detalhadamente a capacidade do algoritmo KNN, com ênfase na classificação e no aprimoramento do entendimento sobre o mesmo.
+### 3.1. Objective
+After completing the [initial KNN implementation project](https://github.com/lfaferreira/ada-potencia-tech-knn-project), I was intrigued to deepen my understanding of how KNN works. This repository explores the capabilities of the KNN algorithm in detail, with a focus on classification and improving understanding.
 
-### 3.2. Ferramentas e Frameworks
-Escolpo de ferramentas utilizadas no projeto:
+### 3.2. Tools and Frameworks
+Scope of tools used in the project:
 
 - Python 3.11.5
 - Jupyter Notebook
@@ -53,17 +53,17 @@ Escolpo de ferramentas utilizadas no projeto:
 - Numpy
 - Machine Learning Classification Model (KNN)
 
-## 4. Insights dos Dados
+## 4. Data Insights
 
-*   Flavanoids mostra uma forte correlação com outras características, principalmente com Total Phenols (0.86) e OD280/OD315 of diluted wines (0.79).
-*   No entanto, a menor correlação ocorre com a variável target (Class), apresentando um coeficiente de -0.85.
-*   A característica Proline destaca-se como a que proporciona a melhor separação entre as classes, especialmente para a classe 0.
-*   Color_intensity também se destaca, especialmente quando combinada com Flavanoids e Total Phenols.
-*   Foi observado que os dados estão em uma escala significativamente variada. Essa disparidade é evidente nos sumários, análises e nos gráficos de distribuição.
-*   A menor valor encontrado está em Nonflavanoid Phenols (0.13).
-*   Considerando a vasta gama de escalas, a aplicação de técnicas como PCA (Principal Component Analysis) pode ser benéfica para reduzir a dimensionalidade dos dados, permitindo uma análise mais eficaz e precisa.
+*   Flavanoids show a strong correlation with other features, especially with Total Phenols (0.86) and OD280/OD315 of diluted wines (0.79).
+*   However, the lowest correlation occurs with the target variable (Class), with a coefficient of -0.85.
+*   The Proline feature stands out as providing the best separation between classes, especially for class 0.
+*   The color_intensity also stands out, especially when combined with Flavanoids and Total Phenols.
+*   It was observed that the data is on significantly varied scales. This disparity is evident in summaries, analyses, and distribution plots.
+*   The lowest value found is in Nonflavanoid Phenols (0.13).
+*   Considering the wide range of scales, the application of techniques like PCA (Principal Component Analysis) may be beneficial for reducing the dimensionality of the data, allowing for more effective and accurate analysis.
 
-## 5. Projeções Futuras
-* Adicionar as metricas de Machine Learning e Filtro Selecionado
-* Adicionar resultados do projeto
-* Adicionar uma conclusão do projeto
+## 5. Future Outlook
+* Add machine learning metrics and selected filters.
+* Add project results.
+* Include a project conclusion.
