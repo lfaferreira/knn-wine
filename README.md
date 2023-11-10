@@ -38,37 +38,22 @@ The Wine dataset consists of 14 features, one of which is the target, and 178 la
 
   
 
-|Attribute|Definition|Data Type|
-
-|---|---|---|
-
-|alcohol|Alcohol content|float64|
-
-|malic_acid|Malic acid|float64|
-
-|ash|Ash|float64|
-
-|alcalinity_of_ash|Alkalinity of ash|float64|
-
-|magnesium|Magnesium|float64|
-
-|total_phenols|Total phenols|float64|
-
-|flavanoids|Flavanoids|float64|
-
-|nonflavanoid_phenols|Non-flavanoid phenols|float64|
-
-|proanthocyanins|Proanthocyanins|float64|
-
-|color_intensity|Color intensity|float64|
-
-|hue|Hue|float64|
-
-|od280/od315_of_diluted_wines|OD280/OD315 of diluted wines|float64|
-
-|proline|Proline|float64|
-
-|class|Wine type (target)|int32|
+| Attribute                      | Definition                         | Data Type |
+| ------------------------------ | -----------------------------------| --------- |
+| alcohol                        | Alcohol content                    | float64   |
+| malic_acid                     | Malic acid                         | float64   |
+| ash                            | Ash                                | float64   |
+| alcalinity_of_ash              | Alkalinity of ash                  | float64   |
+| magnesium                      | Magnesium                          | float64   |
+| total_phenols                  | Total phenols                      | float64   |
+| flavanoids                     | Flavanoids                         | float64   |
+| nonflavanoid_phenols           | Non-flavanoid phenols              | float64   |
+| proanthocyanins                | Proanthocyanins                    | float64   |
+| color_intensity                | Color intensity                    | float64   |
+| hue                            | Hue                                | float64   |
+| od280/od315_of_diluted_wines   | OD280/OD315 of diluted wines       | float64   |
+| proline                        | Proline                            | float64   |
+| class                          | Wine type (target)                 | int32     |
 
   
 
@@ -127,12 +112,11 @@ Scope of tools used in the project:
 ## 5. Machine Learning Metrics
 As the only Machine Learning model used is KNN (K = 5), I chose to use the data in two states (Normalized and Standardized) for comparison purposes.  With the following results:
 
-|Scale|Accuracy|Precision|Recall|F1-Score|
+| Scale        | Accuracy | Precision | Recall | F1-Score |
+| ------------ | -------- | --------- | ------ | -------- |
+| Normalized   | 100%     | 100%      | 100%   | 100%     |
+| Standardized | 97.56%   | 98%       | 98%    | 98%      |
 
-|---|---|---|---|---|
-
-|Normalized|100%|100%|100%|100%|
-|Standardized|97,56%|98%|98%|98%|
 
 
 ## 6. Results
