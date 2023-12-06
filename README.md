@@ -12,19 +12,19 @@ This project aims to apply the K-Nearest Neighbors (KNN) algorithm for data clas
 
 ## Table of Contents
 
-- [1. Introduction](#1-Introduction)
+- [1. Introduction](#1-introduction)
 
-- [2. Data Understanding](#2-Data-Understanding)
+- [2. Data Understanding](#2-data-understanding)
 
-- [3. Action Plan](#3-Action-Plan)
+- [3. Action Plan](#3-action-plan)
 
-- [4. Data Insights](#4-Data-Insights)
+- [4. Data Insights](#4-data-insights)
 
-- [5. Machine Learning Metrics](#5-Machine-Learning-Metrics)
+- [5. Machine Learning Metrics](#5-machine-learning-metrics)
 
-- [6. Results](#6-Results)
+- [6. Results](#6-results)
 
-- [7. Conclusion](#5-Conclusion)
+- [7. Conclusion](#7-conclusion)
   
   
 
